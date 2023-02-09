@@ -23,7 +23,7 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="6ff5d1a9-acdb-41dd-ada0-1af572a1dada" dataset="onlineshop.flyway_schema_history" active-filter-id="" />
+    <filter-actions connection-id="e5ec1d01-7438-41a4-9873-4048c39fef92" dataset="onlineshop.supplier" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />

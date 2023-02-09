@@ -25,8 +25,8 @@ public class Product {
     private Double weight;
     private String imgUrl;
 
-/*    @ManyToOne
-    private Supplier supplier;*/
+    @ManyToOne
+    private Supplier supplier;
 
     @ManyToOne
     private ProductCategory productCategory;

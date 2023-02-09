@@ -12,6 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductCategoryDTO implements Serializable {
+    private Integer id;
     private String name;
     private String description;
 }

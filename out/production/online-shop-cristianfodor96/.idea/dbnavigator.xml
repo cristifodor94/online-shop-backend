@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="6ff5d1a9-acdb-41dd-ada0-1af572a1dada">
-      <console name="MySQL" type="STANDARD" schema="onlineshop" session="Main" />
+    <connection id="e5ec1d01-7438-41a4-9873-4048c39fef92">
+      <console name="onlineshop" type="STANDARD" schema="onlineshop" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -28,15 +28,23 @@
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
   </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <argument-values-cache />
+  </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="6ff5d1a9-acdb-41dd-ada0-1af572a1dada" active="true" signed="true">
+      <connection id="e5ec1d01-7438-41a4-9873-4048c39fef92" active="true" signed="true">
         <database>
-          <name value="MySQL" />
+          <name value="onlineshop" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />

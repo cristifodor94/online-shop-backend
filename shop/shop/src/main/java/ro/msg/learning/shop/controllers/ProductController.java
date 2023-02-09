@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import ro.msg.learning.shop.dtos.ProductDTO;
 import ro.msg.learning.shop.entities.Product;
 import ro.msg.learning.shop.mappers.ProductMapper;
+import ro.msg.learning.shop.repositories.ProductRepository;
 import ro.msg.learning.shop.services.ProductService;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 public class ProductController {
     private final ProductService productService;
     private final ProductMapper productMapper;
+    private final ProductRepository productRepository;
 
 
     //create
@@ -37,9 +39,17 @@ public class ProductController {
 
     //read by id
     @GetMapping({"/{id}"})
-    public void readProductById(@PathVariable("id") Integer id) {productService.findProductById(id);}
+    public Product readProductById(@PathVariable("id") Integer id) {
+        return productService.findProductById(id);
+
+    }
 
     //read all products
     @GetMapping
     public List<Product> listProducts() {return productService.getAllProducts();}
+
+    @GetMapping("/productCategory")
+    public List<Product> getProductsByCategoryId(@RequestParam Integer id) {
+        return productService.getProductsByCategoryId(id);
+    }
 }

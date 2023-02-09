@@ -5,324 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="846cdcaf-ded3-4330-ab17-a5e1a5eaf6fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_electronwill_night_config_core_3_6_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_electronwill_night_config_toml_3_6_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_23_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_angus_activation_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_mysql_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_6_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jdbc_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jdbc_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_relational_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/online-shop-cristianfodor96.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/009fec76a8102972caa05a120e40f2346548fd9d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/0398ccd0f49298b10a3d76a47800d2ebecd49859" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/040efa4595ba935fe295e14dcb43c99238f47117" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06d1e5bb54a1ab55701b464a13f8f856cbba89b9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/0796db585ef49461668f5eb0f877e31eb1a18b39" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09a6edcfd8b4da12d390847727850e8cfdfd8a2c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a0884c2c1835097e3cb9f87837f1a31d08d70c3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b72bc0cab92d74460371a0fca0fee0b90a88413" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/225d348de279447f3d07aee41dbe63e124b2d2c5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22e0de5732415b90bea5b90d359f7efe1f2fca8c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d40ad71c0c2aae64b2773509014bf835196f816" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/31d0342a9b996911a61d719e64fd3d1112baf036" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/33fc6f94d505517c5e61128482b23e598c5ba68f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/4448c9a8c710a4f6624bd43629ee60a7671e53a5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/4756fa2ac99fa09bc43b8fc32f62689e656dd15c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f95f4ee7fff50d904a2f90a3baf2e1aee77c3f0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/655b1f2c1e80cc2821b707e7debccf068c5abb11" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/759256104b0bdf68c9a60076414dd077639af23e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/773b00b634c4d64ff9e8d32184fd004d5093771f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78d37f14fbfdcbcf117acfc4997127b7c1213f6c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/885be9531a45dc6829b427b2e687d8bd49771046" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8a6c373741c2b0020354783c2fa262058588f2d7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95401487de4b818406e353755ead7cad44053ff5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d31a746436fff72e191798b7a5caf2b09ac4315" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/afe780bb2374c48966f1d15880caa298ff1d2842" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b128058540a642a7b19924db1d0b80e1204bbfcd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/bab1118f246d514409f37ce5a61d4de90e090831" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf87922449f356c22422d12163fe4a5831fe01c4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c06bb41ad611b3088cccbb4a0c8cca007caf2729" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd9530a2cc09917fbc8cc75ea4af9fc3cd4d4b81" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce7ec11f45e26df4aa86a3628c08718339ee2e40" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d76d50836961f15b2524f2c69bc4df5cf90cbd62" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd6c043f53819b361402006209c16001def79a04" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e28a64c37dd4450b52e1376c5d0668d8f08d455e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efc2e6322b6f040ae4fe44401e8cc1c791cd7ece" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f63451cce7ead50573098471b6cf2c541c38ea51" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_electronwill_night_config_core_3_6_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_electronwill_night_config_toml_3_6_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_assertj_assertj_core_3_23_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_eclipse_angus_angus_activation_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_flywaydb_flyway_core_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_flywaydb_flyway_mysql_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_6_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_mockito_mockito_core_4_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jdbc_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_data_spring_data_jdbc_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_data_spring_data_relational_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_test_6_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_aop_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_aspects_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_beans_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_context_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_core_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_expression_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_jdbc_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_orm_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_test_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_tx_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_web_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_spring_webmvc_6_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/online-shop-cristianfodor96.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/0/4/040efa4595ba935fe295e14dcb43c99238f47117" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/1/9/19f3e5e6ff78fe29cd0f52c2307e766792d7ed9d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/3/1/31d0342a9b996911a61d719e64fd3d1112baf036" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/7/5/759256104b0bdf68c9a60076414dd077639af23e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/data/fileDb.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/data/fileDb.trace.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/ShopApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/controllers/ProductCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/controllers/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/CustomerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/LocationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/OrderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/OrderDetailDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/ProductCategoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/ProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/RevenueDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/StockDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/SupplierDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/OrderDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/ProductCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Revenue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Supplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/exceptions/ProductNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/mappers/OrderDetailMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/mappers/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/mappers/ProductCategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/mappers/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/LocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/OrderDetailRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/ProductCategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/RevenueRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/StockRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/SupplierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/ProductCategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/utils/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/shop/src/test/java/ro/msg/learning/shop/ShopApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/controllers/SupplierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/mappers/SupplierMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/SupplierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_test_6_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/0/4/040efa4595ba935fe295e14dcb43c99238f47117" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/1/9/19f3e5e6ff78fe29cd0f52c2307e766792d7ed9d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/online-shop-cristianfodor96/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/controllers/ProductCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/controllers/ProductCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/ProductCategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/ProductCategoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/SupplierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/dtos/SupplierDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/exceptions/ProductNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/exceptions/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/SupplierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/repositories/SupplierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/ProductCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/ProductCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/src/main/java/ro/msg/learning/shop/services/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675082107923</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Second commit">
+      <created>1675839656567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675839656567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -451,7 +168,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
