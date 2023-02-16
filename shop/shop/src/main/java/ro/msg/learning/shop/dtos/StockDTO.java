@@ -14,5 +14,4 @@ public class StockDTO {
     private Integer id;
     private Product product;
     private Integer quantity;
-
 }

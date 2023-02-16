@@ -5,15 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ro.msg.learning.shop.utils.Address;
 
 import java.time.LocalDateTime;
-import java.util.Set;
 
 @Data
 @Entity
 @Builder
-@Table(name = "order")
+@Table(name = "product_order")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
@@ -21,12 +19,16 @@ public class Order {
     @Column(unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private LocalDateTime createdAt;
-    @Embedded
-    private Address address;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
-    //@Fetch(value = FetchMode.SELECT)
-    private Set<Location> shippedFrom;
-    @ManyToOne Customer customer;
+    private LocalDateTime created;
+    private String country;
+    private String city;
+    private String county;
+    private String street;
+
+    @JoinColumn(name = "shipped_from_id")
+    @ManyToOne
+    private Location shippedFrom;
+    @JoinColumn(name = "customer_id")
+    @ManyToOne
+    private Customer customer;
 }

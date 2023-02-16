@@ -16,5 +16,4 @@ public class RevenueDTO {
     private Integer id;
     private LocalDate date;
     private BigDecimal sum;
-
 }

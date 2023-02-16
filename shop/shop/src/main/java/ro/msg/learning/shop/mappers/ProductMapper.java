@@ -9,6 +9,7 @@ import ro.msg.learning.shop.entities.Product;
 @RequiredArgsConstructor
 public class ProductMapper {
     private final ProductCategoryMapper categoryMapper;
+    private final SupplierMapper supplierMapper;
     public ProductDTO productToProductDTO(Product product) {
         return ProductDTO.builder()
                 .name(product.getName())
@@ -16,6 +17,7 @@ public class ProductMapper {
                 .price(product.getPrice())
                 .weight(product.getWeight())
                 .imgUrl(product.getImgUrl())
+                .supplier(supplierMapper.supplierToSupplierDTO(product.getSupplier()))
                 .productCategory(categoryMapper.categoryToCategoryDTO(product.getProductCategory()))
                 .build();
     }
@@ -27,6 +29,7 @@ public class ProductMapper {
                 .price(productDTO.getPrice())
                 .weight(productDTO.getWeight())
                 .imgUrl(productDTO.getImgUrl())
+                .supplier(supplierMapper.supplierDtoToSupplier(productDTO.getSupplier()))
                 .productCategory(categoryMapper.categoryDtoToCategory(productDTO.getProductCategory()))
                 .build();
     }

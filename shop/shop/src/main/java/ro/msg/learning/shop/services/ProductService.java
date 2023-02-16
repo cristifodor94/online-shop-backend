@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import ro.msg.learning.shop.entities.Product;
 import ro.msg.learning.shop.entities.ProductCategory;
 import ro.msg.learning.shop.exceptions.NotFoundException;
-import ro.msg.learning.shop.repositories.ProductCategoryRepository;
 import ro.msg.learning.shop.repositories.ProductRepository;
 
 import java.util.List;
@@ -17,9 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ProductService {
     private final ProductRepository productRepository;
-    private final ProductCategoryRepository productCategoryRepository;
     private final ProductCategoryService productCategoryService;
-
     private final SupplierService supplierService;
 
     public Product createProduct(Product inputProduct) {
@@ -30,13 +27,10 @@ public class ProductService {
                 .weight(inputProduct.getWeight())
                 .imgUrl(inputProduct.getImgUrl())
                 .supplier(supplierService.checkSupplierPresence(inputProduct.getSupplier()))
-                /*.productCategory(productCategoryService.checkCategoryPresence(inputProduct.getProductCategory())*/
+                .productCategory(productCategoryService.checkCategoryPresence(inputProduct.getProductCategory()))
                 .build();
         return productRepository.save(product);
     }
-
-
-
     public Product updateProduct(Integer id, Product updatedProduct) {
         Product resultedProduct;
         Optional<Product> productToUpdate = productRepository.findById(id);
@@ -66,7 +60,6 @@ public class ProductService {
             throw new NotFoundException("Product not found!");
         }
     }
-
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
@@ -78,6 +71,24 @@ public class ProductService {
         }
          else {
             throw new NotFoundException("Category not found");
+        }
+    }
+    public List<Product> getProductsByCategoryName(String categoryName) {
+        ProductCategory searchedCategoryByName = productCategoryService.findCategoryByName(categoryName);
+        if (searchedCategoryByName != null) {
+            return productRepository.findAllProductsByProductCategory(searchedCategoryByName);
+        }
+        else {
+            throw new NotFoundException("Category name not found");
+        }
+    }
+    public List<Product> getProductsByCategoryName(ProductCategory productCategory) {
+        ProductCategory searchedCategoryByName = productCategoryService.findCategoryByName(productCategory.getName());
+        if (searchedCategoryByName != null) {
+            return productRepository.findAllProductsByProductCategory(searchedCategoryByName);
+        }
+        else {
+            throw new NotFoundException("Category name not found");
         }
     }
 }

@@ -2,8 +2,11 @@ package ro.msg.learning.shop.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import ro.msg.learning.shop.dtos.ProductCategoryDTO;
 import ro.msg.learning.shop.dtos.ProductDTO;
 import ro.msg.learning.shop.entities.Product;
+import ro.msg.learning.shop.entities.ProductCategory;
+import ro.msg.learning.shop.mappers.ProductCategoryMapper;
 import ro.msg.learning.shop.mappers.ProductMapper;
 import ro.msg.learning.shop.repositories.ProductRepository;
 import ro.msg.learning.shop.services.ProductService;
@@ -18,6 +21,7 @@ public class ProductController {
     private final ProductService productService;
     private final ProductMapper productMapper;
     private final ProductRepository productRepository;
+    private final ProductCategoryMapper productCategoryMapper;
 
 
     //create
@@ -48,8 +52,22 @@ public class ProductController {
     @GetMapping
     public List<Product> listProducts() {return productService.getAllProducts();}
 
+    //get Products by Category id
     @GetMapping("/productCategory")
     public List<Product> getProductsByCategoryId(@RequestParam Integer id) {
         return productService.getProductsByCategoryId(id);
+    }
+
+    //get Products by Category name
+    @GetMapping("/productCategoryByName")
+    public List<Product> getProductsByCategoryName(@RequestParam String name) {
+        return productService.getProductsByCategoryName(name);
+    }
+
+    //get Products by Category name using post
+    @PostMapping("/productCategoryByName")
+    public List<Product> getProductsByCategoryName(@RequestBody ProductCategoryDTO productCategoryDTO) {
+        ProductCategory productCategory = productCategoryMapper.categoryDtoToCategory(productCategoryDTO);
+        return productService.getProductsByCategoryName(productCategory);
     }
 }

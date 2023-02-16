@@ -24,19 +24,8 @@ public class Product {
     private BigDecimal price;
     private Double weight;
     private String imgUrl;
-
     @ManyToOne
     private Supplier supplier;
-
     @ManyToOne
     private ProductCategory productCategory;
-
-/*    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
-    @ToString.Exclude
-    private List<Stock> stock;
-
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
-    @ToString.Exclude
-    private List<OrderDetail> orderDetails;*/
-
 }
