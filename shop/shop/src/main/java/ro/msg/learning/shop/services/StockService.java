@@ -13,16 +13,29 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class StockService {
-private final StockRepository stockRepository;
+    private final StockRepository stockRepository;
     private final LocationRepository locationRepository;
-    public List<Stock> findAll() {return stockRepository.findAll();}
-    public List<Stock> findAllByLocation(Location location) {return stockRepository.findAllByLocation(location);}
-    public void deleteAll() {stockRepository.deleteAll();}
-    public void save(Stock stock) {stockRepository.save(stock);}
+
+    public List<Stock> findAll() {
+        return stockRepository.findAll();
+    }
+
+    public List<Stock> findAllByLocation(Location location) {
+        return stockRepository.findAllByLocation(location);
+    }
+
+    public void deleteAll() {
+        stockRepository.deleteAll();
+    }
+
+    public void save(Stock stock) {
+        stockRepository.save(stock);
+    }
+
 
     @Transactional
     public void editQuantity(Stock stock, Integer quantity) {
-        Integer newQuantity = stock.getQuantity()-quantity;
+        Integer newQuantity = stock.getQuantity() - quantity;
         stock.setQuantity(newQuantity);
         stockRepository.save(stock);
     }

@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderDTO {
     private Integer id;
-    private List<OrderDetailDTO> orderDetailDTOList;
+    private List<OrderDetailDTO> orderDetails;
     private LocalDateTime created;
     private String country;
     private String city;

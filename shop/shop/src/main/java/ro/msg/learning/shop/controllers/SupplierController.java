@@ -10,9 +10,9 @@ import ro.msg.learning.shop.services.SupplierService;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping(value = "/suppliers")
 @RequiredArgsConstructor
+
 public class SupplierController {
     private final SupplierService supplierService;
     private final SupplierMapper supplierMapper;

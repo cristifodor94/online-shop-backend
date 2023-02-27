@@ -23,6 +23,8 @@ public class OrderService {
     private final StrategyConfiguration strategyConfiguration;
     private final OrderRepository orderRepository;
 
+    private final ProductService productService;
+
 
     public Order createOrder(Order order, List<OrderDetail> orderDetails) {
         try {
@@ -40,6 +42,5 @@ public class OrderService {
         }
     }
 
-   
     public void deleteAll() {productRepository.deleteAll();}
 }

@@ -20,6 +20,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDateTime created;
+
     private String country;
     private String city;
     private String county;

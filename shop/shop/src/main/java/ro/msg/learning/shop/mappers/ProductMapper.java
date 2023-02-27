@@ -10,6 +10,7 @@ import ro.msg.learning.shop.entities.Product;
 public class ProductMapper {
     private final ProductCategoryMapper categoryMapper;
     private final SupplierMapper supplierMapper;
+
     public ProductDTO productToProductDTO(Product product) {
         return ProductDTO.builder()
                 .name(product.getName())

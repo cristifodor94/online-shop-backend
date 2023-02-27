@@ -12,17 +12,24 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class LocationService {
     private final LocationRepository locationRepository;
-       public List<Location> findAll() {return locationRepository.findAll();}
+
+    public List<Location> findAll() {
+        return locationRepository.findAll();
+    }
+
+    public void deleteAll() {
+        locationRepository.deleteAll();
+    }
 
     public Location createLocation(Location inputLocation) {
-            Location location = Location.builder()
-                    .name(inputLocation.getName())
-                    .city(inputLocation.getCity())
-                    .country(inputLocation.getCountry())
-                    .street(inputLocation.getStreet())
-                    .county(inputLocation.getCounty())
-                    .build();
-            return locationRepository.save(location);
+        Location location = Location.builder()
+                .name(inputLocation.getName())
+                .city(inputLocation.getCity())
+                .country(inputLocation.getCountry())
+                .street(inputLocation.getStreet())
+                .county(inputLocation.getCounty())
+                .build();
+        return locationRepository.save(location);
     }
 
     public Location findLocationById(Integer id) {
@@ -46,4 +53,7 @@ public class LocationService {
         return location;
     }
 
+    public void save(Location location) {
+        locationRepository.save(location);
+    }
 }

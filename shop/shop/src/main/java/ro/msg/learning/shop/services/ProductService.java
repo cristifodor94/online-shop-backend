@@ -31,8 +31,8 @@ public class ProductService {
                 .build();
         return productRepository.save(product);
     }
+
     public Product updateProduct(Integer id, Product updatedProduct) {
-        Product resultedProduct;
         Optional<Product> productToUpdate = productRepository.findById(id);
         if (productToUpdate.isPresent()) {
             Product updated = productToUpdate.get();
@@ -48,6 +48,7 @@ public class ProductService {
         throw new NotFoundException("Product not found!");
 
     }
+
     public void deleteProductById(Integer id) {
         productRepository.deleteById(id);
     }
@@ -56,10 +57,10 @@ public class ProductService {
         Optional<Product> searchedProduct = productRepository.findById(id);
         if (searchedProduct.isPresent()) {
             return searchedProduct.get();
-        } else {
-            throw new NotFoundException("Product not found!");
         }
+        throw new NotFoundException("Product not found!");
     }
+
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
@@ -68,27 +69,32 @@ public class ProductService {
         ProductCategory searchedCategoryById = productCategoryService.findCategoryById(id);
         if (searchedCategoryById != null) {
             return productRepository.findAllProductsByProductCategory(searchedCategoryById);
-        }
-         else {
+        } else {
             throw new NotFoundException("Category not found");
         }
     }
+
     public List<Product> getProductsByCategoryName(String categoryName) {
         ProductCategory searchedCategoryByName = productCategoryService.findCategoryByName(categoryName);
         if (searchedCategoryByName != null) {
             return productRepository.findAllProductsByProductCategory(searchedCategoryByName);
         }
-        else {
-            throw new NotFoundException("Category name not found");
-        }
+        throw new NotFoundException("Category name not found");
     }
+
     public List<Product> getProductsByCategoryName(ProductCategory productCategory) {
         ProductCategory searchedCategoryByName = productCategoryService.findCategoryByName(productCategory.getName());
         if (searchedCategoryByName != null) {
             return productRepository.findAllProductsByProductCategory(searchedCategoryByName);
         }
-        else {
-            throw new NotFoundException("Category name not found");
-        }
+        throw new NotFoundException("Category name not found");
+    }
+
+    public void save(Product product) {
+        productRepository.save(product);
+    }
+
+    public void deleteAll() {
+        productRepository.deleteAll();
     }
 }

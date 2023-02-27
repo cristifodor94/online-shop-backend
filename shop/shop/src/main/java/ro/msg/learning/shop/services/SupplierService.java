@@ -52,4 +52,12 @@ public class SupplierService {
         return supplier;
     }
 
+    public void save(Supplier supplier) {
+        supplierRepository.save(supplier);
+    }
+
+    public void deleteAll() {
+        supplierRepository.deleteAll();
+    }
+
 }

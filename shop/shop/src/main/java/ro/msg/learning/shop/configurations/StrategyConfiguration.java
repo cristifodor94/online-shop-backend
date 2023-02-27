@@ -1,6 +1,5 @@
 package ro.msg.learning.shop.configurations;
 
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +12,6 @@ import ro.msg.learning.shop.services.strategies.SingleLocationStrategy;
 import ro.msg.learning.shop.utils.Strategy;
 
 @Configuration
-@Data
 @RequiredArgsConstructor
 public class StrategyConfiguration {
 
@@ -29,6 +27,5 @@ public class StrategyConfiguration {
             return new SingleLocationStrategy(locationService, stockService);
         }
         else return new MostAbundantStrategy(stockService);
-
     }
 }

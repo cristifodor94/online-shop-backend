@@ -62,4 +62,12 @@ public class ProductCategoryService {
         }
         return productCategory;
     }
+
+    public void save(ProductCategory productCategory) {
+        productCategoryRepository.save(productCategory);
+    }
+
+    public void deleteAll() {
+        productCategoryRepository.deleteAll();
+    }
 }
