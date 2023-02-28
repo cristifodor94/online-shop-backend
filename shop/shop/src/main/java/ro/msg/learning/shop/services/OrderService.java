@@ -23,9 +23,7 @@ public class OrderService {
     private final StrategyConfiguration strategyConfiguration;
     private final OrderRepository orderRepository;
 
-    private final ProductService productService;
-
-
+    @Transactional
     public Order createOrder(Order order, List<OrderDetail> orderDetails) {
         try {
             List<Stock> stockList = strategyConfiguration.findStrategy().createOrder(orderDetails);
@@ -41,6 +39,4 @@ public class OrderService {
             throw new OrderNotCreatedException(e.getMessage() + " | " + "Could not create the order!");
         }
     }
-
-    public void deleteAll() {productRepository.deleteAll();}
 }

@@ -11,8 +11,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerService {
     private final CustomerRepository customerRepository;
+
     public List<Customer> findAll() {return customerRepository.findAll();}
+
     public void deleteAll() {customerRepository.deleteAll();}
+
     public void save(Customer customer) {customerRepository.save(customer);}
 
     public Customer findCustomerByUserName(String username) {

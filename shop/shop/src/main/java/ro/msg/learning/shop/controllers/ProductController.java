@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import ro.msg.learning.shop.dtos.ProductDTO;
 import ro.msg.learning.shop.entities.Product;
-import ro.msg.learning.shop.mappers.ProductCategoryMapper;
 import ro.msg.learning.shop.mappers.ProductMapper;
 import ro.msg.learning.shop.services.ProductService;
 
@@ -17,7 +16,6 @@ import java.util.List;
 public class ProductController {
     private final ProductService productService;
     private final ProductMapper productMapper;
-    private final ProductCategoryMapper productCategoryMapper;
 
     @PostMapping
     public Product createProduct (@RequestBody ProductDTO productDTO) {

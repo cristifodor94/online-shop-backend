@@ -14,8 +14,6 @@ import java.util.stream.Collectors;
 
 public class OrderDetailMapper {
 
-    private final ProductMapper productMapper;
-
     public OrderDetailDTO orderDetailToDto(OrderDetail orderDetail) {
         return OrderDetailDTO.builder()
                 .id(orderDetail.getId())
