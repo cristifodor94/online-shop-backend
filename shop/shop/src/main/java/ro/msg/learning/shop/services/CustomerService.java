@@ -12,11 +12,17 @@ import java.util.List;
 public class CustomerService {
     private final CustomerRepository customerRepository;
 
-    public List<Customer> findAll() {return customerRepository.findAll();}
+    public List<Customer> findAll() {
+        return customerRepository.findAll();
+    }
 
-    public void deleteAll() {customerRepository.deleteAll();}
+    public void deleteAll() {
+        customerRepository.deleteAll();
+    }
 
-    public void save(Customer customer) {customerRepository.save(customer);}
+    public void save(Customer customer) {
+        customerRepository.save(customer);
+    }
 
     public Customer findCustomerByUserName(String username) {
         return customerRepository.findByUsername(username).get();

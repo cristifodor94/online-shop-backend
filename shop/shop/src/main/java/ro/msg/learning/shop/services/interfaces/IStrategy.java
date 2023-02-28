@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface IStrategy {
 
-    public static final String ERROR_MESSAGE="There is no sufficient stock to create the order!";
+    public static final String ERROR_MESSAGE = "There is no sufficient stock to create the order!";
+
     List<Stock> createOrder(List<OrderDetail> products) throws NotFoundException;
 }

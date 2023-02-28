@@ -18,9 +18,9 @@ public class ProductController {
     private final ProductMapper productMapper;
 
     @PostMapping
-    public Product createProduct (@RequestBody ProductDTO productDTO) {
+    public Product createProduct(@RequestBody ProductDTO productDTO) {
         Product product = productMapper.productDtoToProduct(productDTO);
-       return productService.createProduct(product);
+        return productService.createProduct(product);
     }
 
     @PutMapping("/{id}")
@@ -30,7 +30,9 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteProduct(@PathVariable("id") Integer id) {productService.deleteProductById(id);}
+    public void deleteProduct(@PathVariable("id") Integer id) {
+        productService.deleteProductById(id);
+    }
 
     @GetMapping({"/{id}"})
     public Product readProductById(@PathVariable("id") Integer id) {
@@ -38,5 +40,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> listProducts() {return productService.getAllProducts();}
+    public List<Product> listProducts() {
+        return productService.getAllProducts();
+    }
 }

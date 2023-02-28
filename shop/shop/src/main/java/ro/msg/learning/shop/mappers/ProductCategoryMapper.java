@@ -14,6 +14,7 @@ public class ProductCategoryMapper {
                 .description(productCategory.getDescription())
                 .build();
     }
+
     public ProductCategory categoryDtoToCategory(ProductCategoryDTO productCategoryDTO) {
         return ProductCategory.builder()
                 .name(productCategoryDTO.getName())

@@ -25,13 +25,15 @@ public class SingleLocationStrategy implements IStrategy {
         for (Location location : locations) {
             List<Stock> stocks = stockService.findAllByLocation(location);
             int count = checkStocksAvailability(products, stocks);
-                if (count == products.size()) {
-                    editStocksQuantity(stocks, products);
-                    return Arrays.asList(stocks.get(0));
-                }
+            if (count == products.size()) {
+                editStocksQuantity(stocks, products);
+                return Arrays.asList(stocks.get(0));
+            }
 
-        } throw new MissingStockException(ERROR_MESSAGE);
+        }
+        throw new MissingStockException(ERROR_MESSAGE);
     }
+
     private int checkStocksAvailability(List<OrderDetail> products, List<Stock> stocks) {
         int count = 0;
         for (Stock currentStock : stocks) {

@@ -25,7 +25,7 @@ public class LocationService {
     }
 
     public Location findLocationById(Integer id) {
-           return locationRepository.findById(id).orElseThrow(() -> new RuntimeException("Location not found"));
+        return locationRepository.findById(id).orElseThrow(() -> new RuntimeException("Location not found"));
     }
 
     public void save(Location location) {

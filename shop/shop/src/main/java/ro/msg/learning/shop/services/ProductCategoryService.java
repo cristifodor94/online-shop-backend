@@ -30,12 +30,14 @@ public class ProductCategoryService {
         throw new NotFoundException("Category not found!");
     }
 
-    public void deleteCategoryById(Integer id) {productCategoryRepository.deleteById(id);}
+    public void deleteCategoryById(Integer id) {
+        productCategoryRepository.deleteById(id);
+    }
 
     public ProductCategory findCategoryById(Integer id) {
         Optional<ProductCategory> searchedCategory = productCategoryRepository.findById(id);
         if (searchedCategory.isPresent()) {
-          return searchedCategory.get();
+            return searchedCategory.get();
         }
         throw new NotFoundException("Category not found");
     }
@@ -47,7 +49,10 @@ public class ProductCategoryService {
         }
         throw new NotFoundException("Category not found");
     }
-    public List<ProductCategory> getAllCategories() {return productCategoryRepository.findAll();}
+
+    public List<ProductCategory> getAllCategories() {
+        return productCategoryRepository.findAll();
+    }
 
     public ProductCategory checkCategoryPresence(ProductCategory inputProductCategory) {
         Optional<ProductCategory> searchedCategory = productCategoryRepository.findByName(inputProductCategory.getName());

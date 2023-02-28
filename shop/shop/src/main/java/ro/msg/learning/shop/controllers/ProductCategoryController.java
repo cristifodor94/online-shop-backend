@@ -30,12 +30,18 @@ public class ProductCategoryController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteProductCategory(@PathVariable Integer id) {productCategoryService.deleteCategoryById(id);}
+    public void deleteProductCategory(@PathVariable Integer id) {
+        productCategoryService.deleteCategoryById(id);
+    }
 
     @GetMapping("/{id}")
-    public ProductCategory findProductCategoryById(@PathVariable("id") Integer id) {return productCategoryService.findCategoryById(id);}
+    public ProductCategory findProductCategoryById(@PathVariable("id") Integer id) {
+        return productCategoryService.findCategoryById(id);
+    }
 
     @GetMapping
-    public List<ProductCategory> findAllCategories() {return productCategoryService.getAllCategories();}
+    public List<ProductCategory> findAllCategories() {
+        return productCategoryService.getAllCategories();
+    }
 
 }

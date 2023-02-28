@@ -13,15 +13,15 @@ import ro.msg.learning.shop.services.test.DatabaseManipulationService;
 @Profile("test")
 
 public class TestController {
- private final DatabaseManipulationService databaseManipulationService;
+    private final DatabaseManipulationService databaseManipulationService;
 
- @PostMapping(value = "/populateDatabase")
- public void populateDatabase() {
-  databaseManipulationService.fillInDatabase();
- }
+    @PostMapping(value = "/populateDatabase")
+    public void populateDatabase() {
+        databaseManipulationService.fillInDatabase();
+    }
 
- @PostMapping(value = "/clearDatabase")
- public void deleteDatabase() {
-  databaseManipulationService.deleteAll();
- }
+    @PostMapping(value = "/clearDatabase")
+    public void deleteDatabase() {
+        databaseManipulationService.deleteAll();
+    }
 }

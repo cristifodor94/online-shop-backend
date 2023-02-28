@@ -15,17 +15,15 @@ import ro.msg.learning.shop.utils.Strategy;
 @RequiredArgsConstructor
 public class StrategyConfiguration {
 
-    @Value("${app.strategy}")
-    private String strategy;
-
     private final StockService stockService;
     private final LocationService locationService;
+    @Value("${app.strategy}")
+    private String strategy;
 
     @Bean
     public IStrategy findStrategy() {
         if (strategy.equals(Strategy.SINGLE_LOCATION.toString())) {
             return new SingleLocationStrategy(locationService, stockService);
-        }
-        else return new MostAbundantStrategy(stockService);
+        } else return new MostAbundantStrategy(stockService);
     }
 }

@@ -40,11 +40,12 @@ public class MostAbundantStrategy implements IStrategy {
         editStocksQuantity(result, products);
         return result;
     }
+
     public void editStocksQuantity(List<Stock> stocks, List<OrderDetail> products) {
         for (Stock stock : stocks) {
             for (OrderDetail product : products) {
                 if (stock.getProduct().equals(product.getProduct())) {
-                    stockService.editQuantity(stock,product.getQuantity());
+                    stockService.editQuantity(stock, product.getQuantity());
                     break;
                 }
             }

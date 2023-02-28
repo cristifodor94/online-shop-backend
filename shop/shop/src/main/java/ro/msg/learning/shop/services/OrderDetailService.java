@@ -10,6 +10,11 @@ import ro.msg.learning.shop.repositories.OrderDetailRepository;
 public class OrderDetailService {
     private final OrderDetailRepository orderDetailRepository;
 
-    public void deleteAll() {orderDetailRepository.deleteAll();}
-    public void save(OrderDetail orderDetail) {orderDetailRepository.save(orderDetail);}
+    public void deleteAll() {
+        orderDetailRepository.deleteAll();
+    }
+
+    public void save(OrderDetail orderDetail) {
+        orderDetailRepository.save(orderDetail);
+    }
 }

@@ -21,6 +21,6 @@ public class Stock {
     private Product product;
     @ManyToOne
     private Location location;
-private Integer quantity;
+    private Integer quantity;
 
 }

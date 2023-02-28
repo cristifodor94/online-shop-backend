@@ -15,9 +15,11 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class SupplierService {
     private final SupplierRepository supplierRepository;
+
     public Supplier createSupplier(Supplier inputSupplier) {
         return supplierRepository.save(inputSupplier);
     }
+
     public Supplier updateSupplier(Integer id, Supplier updatedSupplier) {
         Optional<Supplier> supplierToUpdate = supplierRepository.findById(id);
         if (supplierToUpdate.isPresent()) {
@@ -26,9 +28,11 @@ public class SupplierService {
         }
         throw new NotFoundException("Supplier not found!");
     }
+
     public void deleteSupplierById(Integer id) {
         supplierRepository.deleteById(id);
     }
+
     public Supplier findSupplierById(Integer id) {
         Optional<Supplier> searchedSupplier = supplierRepository.findById(id);
         if (searchedSupplier.isPresent()) {
@@ -36,9 +40,11 @@ public class SupplierService {
         }
         throw new NotFoundException("Supplier not found!");
     }
+
     public List<Supplier> getAllSuppliers() {
         return supplierRepository.findAll();
     }
+
     public Supplier checkSupplierPresence(Supplier inputSupplier) {
         Optional<Supplier> searchedSupplier = supplierRepository.findByName(inputSupplier.getName());
         Supplier supplier;
