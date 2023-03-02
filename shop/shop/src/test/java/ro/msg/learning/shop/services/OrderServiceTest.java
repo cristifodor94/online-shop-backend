@@ -67,18 +67,18 @@ class OrderServiceTest {
 
     private void createOrderSuccessfully() {
         List<OrderDetailDTO> products = new ArrayList<>();
-        OrderDetailDTO orderDetailDTO = OrderDetailDTO.builder().product(productDellLaptop).id(productDellLaptop.getId()).quantity(2).build();
+        OrderDetailDTO orderDetailDTO = OrderDetailDTO.builder().productId(productDellLaptop.getId()).quantity(2).build();
         products.add(orderDetailDTO);
-        orderDetailDTO = OrderDetailDTO.builder().product(productRazerKeyboard).id(productRazerKeyboard.getId()).quantity(1).build();
+        orderDetailDTO = OrderDetailDTO.builder().productId(productRazerKeyboard.getId()).quantity(1).build();
         products.add(orderDetailDTO);
         orderDTO.setOrderDetails(products);
     }
 
     private void failToCreateOrder() {
         List<OrderDetailDTO> products = new ArrayList<>();
-        OrderDetailDTO orderDetailDTO = OrderDetailDTO.builder().product(productDellLaptop).quantity(500).build();
+        OrderDetailDTO orderDetailDTO = OrderDetailDTO.builder().productId(15).quantity(500).build();
         products.add(orderDetailDTO);
-        orderDetailDTO = OrderDetailDTO.builder().product(productRazerKeyboard).quantity(300).build();
+        orderDetailDTO = OrderDetailDTO.builder().productId(16).quantity(300).build();
         products.add(orderDetailDTO);
         orderDTO.setOrderDetails(products);
     }

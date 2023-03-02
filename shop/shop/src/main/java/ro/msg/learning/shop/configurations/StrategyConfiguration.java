@@ -24,6 +24,8 @@ public class StrategyConfiguration {
     public IStrategy findStrategy() {
         if (strategy.equals(Strategy.SINGLE_LOCATION.toString())) {
             return new SingleLocationStrategy(locationService, stockService);
-        } else return new MostAbundantStrategy(stockService);
+        } else {
+            return new MostAbundantStrategy(stockService);
+        }
     }
 }

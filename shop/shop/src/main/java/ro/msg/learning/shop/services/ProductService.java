@@ -4,7 +4,6 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ro.msg.learning.shop.entities.Product;
-import ro.msg.learning.shop.entities.ProductCategory;
 import ro.msg.learning.shop.exceptions.NotFoundException;
 import ro.msg.learning.shop.repositories.ProductRepository;
 
@@ -20,33 +19,20 @@ public class ProductService {
     private final SupplierService supplierService;
 
     public Product createProduct(Product inputProduct) {
-        Product product = Product.builder()
-                .name(inputProduct.getName())
-                .description(inputProduct.getDescription())
-                .price(inputProduct.getPrice())
-                .weight(inputProduct.getWeight())
-                .imgUrl(inputProduct.getImgUrl())
-                .supplier(supplierService.checkSupplierPresence(inputProduct.getSupplier()))
-                .productCategory(productCategoryService.checkCategoryPresence(inputProduct.getProductCategory()))
-                .build();
-        return productRepository.save(product);
+        inputProduct.setSupplier(supplierService.checkSupplierPresence(inputProduct.getSupplier()));
+        inputProduct.setProductCategory(productCategoryService.checkCategoryPresence(inputProduct.getProductCategory()));
+        return productRepository.save(inputProduct);
     }
 
     public Product updateProduct(Integer id, Product updatedProduct) {
         Optional<Product> productToUpdate = productRepository.findById(id);
         if (productToUpdate.isPresent()) {
-            Product updated = productToUpdate.get();
-            updated.setName(updatedProduct.getName());
-            updated.setDescription(updatedProduct.getDescription());
-            updated.setPrice(updatedProduct.getPrice());
-            updated.setWeight(updatedProduct.getWeight());
-            updated.setImgUrl(updatedProduct.getImgUrl());
-            updated.setSupplier(supplierService.checkSupplierPresence(updatedProduct.getSupplier()));
-            updated.setProductCategory(productCategoryService.checkCategoryPresence(updatedProduct.getProductCategory()));
-            return productRepository.save(updated);
+            updatedProduct.setId(id);
+            updatedProduct.setSupplier(supplierService.checkSupplierPresence(updatedProduct.getSupplier()));
+            updatedProduct.setProductCategory(productCategoryService.checkCategoryPresence(updatedProduct.getProductCategory()));
+            return productRepository.save(updatedProduct);
         }
         throw new NotFoundException("Product not found!");
-
     }
 
     public void deleteProductById(Integer id) {
@@ -63,38 +49,5 @@ public class ProductService {
 
     public List<Product> getAllProducts() {
         return productRepository.findAll();
-    }
-
-    public List<Product> getProductsByCategoryId(Integer id) {
-        ProductCategory searchedCategoryById = productCategoryService.findCategoryById(id);
-        if (searchedCategoryById != null) {
-            return productRepository.findAllProductsByProductCategory(searchedCategoryById);
-        } else {
-            throw new NotFoundException("Category not found");
-        }
-    }
-
-    public List<Product> getProductsByCategoryName(String categoryName) {
-        ProductCategory searchedCategoryByName = productCategoryService.findCategoryByName(categoryName);
-        if (searchedCategoryByName != null) {
-            return productRepository.findAllProductsByProductCategory(searchedCategoryByName);
-        }
-        throw new NotFoundException("Category name not found");
-    }
-
-    public List<Product> getProductsByCategoryName(ProductCategory productCategory) {
-        ProductCategory searchedCategoryByName = productCategoryService.findCategoryByName(productCategory.getName());
-        if (searchedCategoryByName != null) {
-            return productRepository.findAllProductsByProductCategory(searchedCategoryByName);
-        }
-        throw new NotFoundException("Category name not found");
-    }
-
-    public void save(Product product) {
-        productRepository.save(product);
-    }
-
-    public void deleteAll() {
-        productRepository.deleteAll();
     }
 }

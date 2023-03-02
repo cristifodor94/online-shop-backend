@@ -8,7 +8,6 @@ import ro.msg.learning.shop.entities.*;
 import ro.msg.learning.shop.exceptions.MissingStockException;
 import ro.msg.learning.shop.exceptions.OrderNotCreatedException;
 import ro.msg.learning.shop.repositories.OrderRepository;
-import ro.msg.learning.shop.repositories.ProductRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,7 +17,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class OrderService {
     private final OrderDetailService orderDetailService;
-    private final ProductRepository productRepository;
     private final CustomerService customerService;
     private final StrategyConfiguration strategyConfiguration;
     private final OrderRepository orderRepository;
@@ -29,7 +27,7 @@ public class OrderService {
             List<Stock> stockList = strategyConfiguration.findStrategy().createOrder(orderDetails);
             List<Location> locationList = stockList.stream().map(Stock::getLocation).collect(Collectors.toList());
             order.setShippedFrom(locationList.get(0));
-            Customer customer = customerService.findAll().get(0);
+            Customer customer = customerService.findById(1);
             order.setCustomer(customer);
             orderRepository.save(order);
             orderDetails.forEach(e -> e.setOrder(order));
@@ -39,4 +37,5 @@ public class OrderService {
             throw new OrderNotCreatedException(e.getMessage() + " | " + "Could not create the order!");
         }
     }
+
 }

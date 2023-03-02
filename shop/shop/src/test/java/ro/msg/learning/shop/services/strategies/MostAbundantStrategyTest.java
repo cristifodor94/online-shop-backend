@@ -1,5 +1,6 @@
 package ro.msg.learning.shop.services.strategies;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
@@ -47,6 +48,7 @@ class MostAbundantStrategyTest {
     @InjectMocks
     private MostAbundantStrategy mostAbundantStrategy;
 
+    @BeforeEach
     void init() {
         createLocations();
         createProductCategory();
@@ -56,8 +58,14 @@ class MostAbundantStrategyTest {
     }
 
     private void createLocations() {
-        this.locationSibiu = new Location(1, "Sibiu Location", COUNTRY, CITY, COUNTY, STREET);
-        this.locationCluj = new Location(2, "Cluj Location", COUNTRY, CLUJ_CITY, CLUJ_COUNTY, STREET);
+        this.locationCluj = Location.builder()
+                .name("Cluj Location")
+                .address(Address.builder().country(COUNTRY).city(CLUJ_CITY).county(CLUJ_COUNTY).street(STREET)
+                        .build())
+                .build();
+        this.locationSibiu = Location.builder().name("Sibiu Location")
+                .address(Address.builder().country(COUNTRY).city(CITY).county(COUNTY).street(STREET).build())
+                .build();
     }
 
     private void createProductCategory() {
@@ -85,7 +93,6 @@ class MostAbundantStrategyTest {
 
     @Test
     void verifyDifferentStocks() {
-        init();
         this.orderDetails = new ArrayList<>();
         OrderDetail orderDetail = OrderDetail.builder().product(productDellLaptop).quantity(3).build();
         this.orderDetails.add(orderDetail);

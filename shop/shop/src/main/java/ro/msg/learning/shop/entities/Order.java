@@ -20,12 +20,8 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDateTime created;
-
-    private String country;
-    private String city;
-    private String county;
-    private String street;
-
+    @Embedded
+    private Address address;
     @JoinColumn(name = "shipped_from_id")
     @ManyToOne
     private Location shippedFrom;

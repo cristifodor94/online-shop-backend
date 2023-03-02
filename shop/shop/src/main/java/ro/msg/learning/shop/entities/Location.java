@@ -18,8 +18,6 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String country;
-    private String city;
-    private String county;
-    private String street;
+    @Embedded
+    private Address address;
 }

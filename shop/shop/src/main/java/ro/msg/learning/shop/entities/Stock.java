@@ -13,13 +13,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Stock {
-    @Id
-    @Column(unique = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
+    @EmbeddedId
+    private StockKey id;
+
     @ManyToOne
+    @MapsId("productId")
+    @JoinColumn(name = "product_id")
     private Product product;
     @ManyToOne
+    @MapsId("locationId")
+    @JoinColumn(name = "location_id")
     private Location location;
     private Integer quantity;
 

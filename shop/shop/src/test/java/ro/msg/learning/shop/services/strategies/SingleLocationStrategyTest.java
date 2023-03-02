@@ -1,6 +1,7 @@
 package ro.msg.learning.shop.services.strategies;
 
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
@@ -53,6 +54,7 @@ class SingleLocationStrategyTest {
     @InjectMocks
     private SingleLocationStrategy singleLocationStrategy;
 
+    @BeforeEach
     void init() {
         createLocations();
         createProductCategory();
@@ -62,8 +64,14 @@ class SingleLocationStrategyTest {
     }
 
     private void createLocations() {
-        this.locationSibiu = new Location(1, "Sibiu Location", COUNTRY, CITY, COUNTY, STREET);
-        this.locationCluj = new Location(2, "Cluj Location", COUNTRY, CLUJ_CITY, CLUJ_COUNTY, STREET);
+        this.locationCluj = Location.builder()
+                .name("Cluj Location")
+                .address(Address.builder().country(COUNTRY).city(CLUJ_CITY).county(CLUJ_COUNTY).street(STREET)
+                        .build())
+                .build();
+        this.locationSibiu = Location.builder().name("Sibiu Location")
+                .address(Address.builder().country(COUNTRY).city(CITY).county(COUNTY).street(STREET).build())
+                .build();
         this.locations = new ArrayList<>();
         this.locations.add(locationCluj);
         this.locations.add(locationSibiu);
@@ -92,22 +100,17 @@ class SingleLocationStrategyTest {
 
     @Test
     void createOrderSuccessfully() {
-        init();
         this.orderDetails = new ArrayList<>();
         OrderDetail orderDetail = OrderDetail.builder().product(productDellLaptop).quantity(3).build();
         this.orderDetails.add(orderDetail);
         orderDetail = OrderDetail.builder().product(productRazerKeyboard).quantity(4).build();
         this.orderDetails.add(orderDetail);
 
-        //when
         when(locationService.findAll()).thenReturn(locations);
         when(stockService.findAllByLocation(locationCluj)).thenReturn(Arrays.asList(stockDellLaptopCluj, stockRazerKeyboardCluj));
 
-        //Method Call
-
         List<Stock> stockList = singleLocationStrategy.createOrder(this.orderDetails);
 
-        //assert
         assertFalse(stockList.isEmpty());
         assertThat(stockList).hasSize(1);
         assertThat(stockList.get(0).getLocation().equals(locationCluj));
@@ -115,7 +118,6 @@ class SingleLocationStrategyTest {
 
     @Test
     void failToCreateOrder() {
-        init();
         this.orderDetails = new ArrayList<>();
         OrderDetail orderDetail = OrderDetail.builder().product(productDellLaptop).quantity(300).build();
         this.orderDetails.add(orderDetail);
