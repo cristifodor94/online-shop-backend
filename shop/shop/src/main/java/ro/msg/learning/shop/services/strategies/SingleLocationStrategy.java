@@ -37,8 +37,8 @@ public class SingleLocationStrategy implements IStrategy {
     private int checkStocksAvailability(List<OrderDetail> products, List<Stock> stocks) {
         int count = 0;
         for (Stock currentStock : stocks) {
-            for (OrderDetail product : products) {
-                if (currentStock.getProduct().getId().equals(product.getProduct().getId()) && currentStock.getQuantity() >= product.getQuantity()) {
+            for (OrderDetail orderDetail : products) {
+                if (currentStock.getProduct().getId().equals(orderDetail.getProduct().getId()) && currentStock.getQuantity() >= orderDetail.getQuantity()) {
                     count++;
                     break;
                 }
@@ -49,9 +49,9 @@ public class SingleLocationStrategy implements IStrategy {
 
     public void editStocksQuantity(List<Stock> stocks, List<OrderDetail> products) {
         for (Stock stock : stocks) {
-            for (OrderDetail product : products) {
-                if (stock.getProduct().getId().equals(product.getProduct().getId())) {
-                    stockService.editQuantity(stock, product.getQuantity());
+            for (OrderDetail orderDetail : products) {
+                if (stock.getProduct().getId().equals(orderDetail.getProduct().getId())) {
+                    stockService.editQuantity(stock, orderDetail.getQuantity());
                     break;
                 }
             }

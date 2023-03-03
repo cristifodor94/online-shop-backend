@@ -34,4 +34,8 @@ public class StockService {
         stock.setQuantity(newQuantity);
         stockRepository.save(stock);
     }
+
+    public List<Stock> findLocationByProductAndQuantity(Integer productId, Integer quantity) {
+        return stockRepository.findLocationByProductIAndQuantityDesc(productId, quantity);
+    }
 }
