@@ -8,12 +8,6 @@ import ro.msg.learning.shop.entities.ProductCategory;
 @Component
 @NoArgsConstructor
 public class ProductCategoryMapper {
-    public ProductCategoryDTO categoryToCategoryDTO(ProductCategory productCategory) {
-        return ProductCategoryDTO.builder()
-                .name(productCategory.getName())
-                .description(productCategory.getDescription())
-                .build();
-    }
 
     public ProductCategory categoryDtoToCategory(ProductCategoryDTO productCategoryDTO) {
         return ProductCategory.builder()

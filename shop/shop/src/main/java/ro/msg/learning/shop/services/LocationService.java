@@ -16,10 +16,6 @@ public class LocationService {
         return locationRepository.findAll();
     }
 
-    public void deleteAll() {
-        locationRepository.deleteAll();
-    }
-
     public Location createLocation(Location inputLocation) {
         return locationRepository.save(inputLocation);
     }

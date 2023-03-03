@@ -11,18 +11,6 @@ public class ProductMapper {
     private final ProductCategoryMapper categoryMapper;
     private final SupplierMapper supplierMapper;
 
-    public ProductDTO productToProductDTO(Product product) {
-        return ProductDTO.builder()
-                .name(product.getName())
-                .description(product.getDescription())
-                .price(product.getPrice())
-                .weight(product.getWeight())
-                .imgUrl(product.getImgUrl())
-                .supplier(supplierMapper.supplierToSupplierDTO(product.getSupplier()))
-                .productCategory(categoryMapper.categoryToCategoryDTO(product.getProductCategory()))
-                .build();
-    }
-
     public Product productDtoToProduct(ProductDTO productDTO) {
         return Product.builder()
                 .name(productDTO.getName())

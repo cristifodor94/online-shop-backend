@@ -42,14 +42,6 @@ public class ProductCategoryService {
         throw new NotFoundException("Category not found");
     }
 
-    public ProductCategory findCategoryByName(String name) {
-        Optional<ProductCategory> searchedCategoryName = productCategoryRepository.findByName(name);
-        if (searchedCategoryName.isPresent()) {
-            return searchedCategoryName.get();
-        }
-        throw new NotFoundException("Category not found");
-    }
-
     public List<ProductCategory> getAllCategories() {
         return productCategoryRepository.findAll();
     }

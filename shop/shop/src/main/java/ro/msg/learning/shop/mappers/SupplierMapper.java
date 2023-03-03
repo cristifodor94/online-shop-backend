@@ -8,11 +8,6 @@ import ro.msg.learning.shop.entities.Supplier;
 @Component
 @RequiredArgsConstructor
 public class SupplierMapper {
-    public SupplierDTO supplierToSupplierDTO(Supplier supplier) {
-        return SupplierDTO.builder()
-                .name(supplier.getName())
-                .build();
-    }
 
     public Supplier supplierDtoToSupplier(SupplierDTO supplierDTO) {
         return Supplier.builder()

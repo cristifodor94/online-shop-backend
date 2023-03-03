@@ -16,10 +16,6 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    public void deleteAll() {
-        customerRepository.deleteAll();
-    }
-
     public void save(Customer customer) {
         customerRepository.save(customer);
     }
