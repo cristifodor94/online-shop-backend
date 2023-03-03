@@ -47,7 +47,7 @@ public class SingleLocationStrategy implements IStrategy {
         return count;
     }
 
-    public void editStocksQuantity(List<Stock> stocks, List<OrderDetail> products) {
+    private void editStocksQuantity(List<Stock> stocks, List<OrderDetail> products) {
         for (Stock stock : stocks) {
             for (OrderDetail orderDetail : products) {
                 if (stock.getProduct().getId().equals(orderDetail.getProduct().getId())) {

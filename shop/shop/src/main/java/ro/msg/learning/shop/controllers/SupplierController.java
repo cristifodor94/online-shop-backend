@@ -21,29 +21,36 @@ public class SupplierController {
     private final SupplierMapper supplierMapper;
 
     @PostMapping
-    public SupplierDTO createSupplier(@RequestBody SupplierDTO supplierDTO) {
-        return supplierMapper.supplierToSupplierDTO(supplierService.createSupplier(supplierMapper.supplierDtoToSupplier(supplierDTO)));
+    public ResponseEntity<SupplierDTO> createSupplier(@RequestBody SupplierDTO supplierDTO) {
+        Supplier supplier = supplierService.createSupplier(supplierMapper.supplierDtoToSupplier(supplierDTO));
+        SupplierDTO dto = supplierMapper.supplierToSupplierDTO(supplier);
+        return new ResponseEntity<>(dto, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public SupplierDTO updateSupplier(@PathVariable Integer id, @RequestBody SupplierDTO supplierDTO) {
-        return supplierMapper.supplierToSupplierDTO(supplierService.updateSupplier(id, supplierMapper.supplierDtoToSupplier(supplierDTO)));
+    public ResponseEntity<SupplierDTO> updateSupplier(@PathVariable Integer id, @RequestBody SupplierDTO supplierDTO) {
+        Supplier supplier = supplierService.updateSupplier(id, supplierMapper.supplierDtoToSupplier(supplierDTO));
+        SupplierDTO dto = supplierMapper.supplierToSupplierDTO(supplier);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteSupplier(@PathVariable("id") Integer id) {
         supplierService.deleteSupplierById(id);
     }
 
     @GetMapping("/{id}")
-    public SupplierDTO getSupplierById(@PathVariable("id") Integer id) {
-        return supplierMapper.supplierToSupplierDTO(supplierService.findSupplierById(id));
+    public ResponseEntity<SupplierDTO> getSupplierById(@PathVariable("id") Integer id) {
+        Supplier supplier = supplierService.findSupplierById(id);
+        SupplierDTO dto = supplierMapper.supplierToSupplierDTO(supplier);
+        return new ResponseEntity<>(dto, HttpStatus.FOUND);
     }
 
     @GetMapping
     public ResponseEntity<List<SupplierDTO>> getAllSuppliers() {
         List<Supplier> suppliers = supplierService.getAllSuppliers();
         List<SupplierDTO> supplierDTOS = suppliers.stream().map(supplierMapper::supplierToSupplierDTO).collect(Collectors.toList());
-        return new ResponseEntity<>(supplierDTOS, HttpStatus.OK);
+        return new ResponseEntity<>(supplierDTOS, HttpStatus.FOUND);
     }
 }

@@ -21,6 +21,7 @@ import java.util.List;
 @RequestMapping(value = "/orders")
 @RequiredArgsConstructor
 
+
 public class OrderController {
     private final OrderMapper orderMapper;
     private final OrderService orderService;
@@ -28,10 +29,10 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<OrderDTO> createOrder(@RequestBody OrderDTO orderDTO) {
-        Order orderToCreate = orderService.createOrder(orderMapper.orderDtoToOrder(orderDTO), orderDetailMapper.orderDtoToOrderDetail(orderDTO.getOrderDetails()));
+        Order orderToCreate = orderService.createOrder(orderMapper.orderDtoToOrder(orderDTO), orderDetailMapper.orderDetailDtoToOrderDetail(orderDTO.getOrderDetails()));
         orderDTO = orderMapper.orderToOrderDTO(orderToCreate);
-        List<OrderDetailDTO> orderDetailDTOS = orderDetailMapper.orderToOrderDetailDTO(orderToCreate.getOrderDetails());
+        List<OrderDetailDTO> orderDetailDTOS = orderDetailMapper.orderDetailToOrderDetailDTO(orderToCreate.getOrderDetails());
         orderDTO.setOrderDetails(orderDetailDTOS);
-        return new ResponseEntity<>(orderDTO, HttpStatus.OK);
+        return new ResponseEntity<>(orderDTO, HttpStatus.CREATED);
     }
 }

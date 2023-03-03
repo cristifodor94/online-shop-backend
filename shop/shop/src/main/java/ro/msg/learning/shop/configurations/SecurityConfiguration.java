@@ -20,7 +20,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/orders/**", "/products/**", "/product-categories/**", "/locations/**", "/stocks/**").permitAll()
+                .requestMatchers("/orders/**", "/products/**", "/product-categories/**", "/locations/**", "/stocks/**").authenticated()
                 .requestMatchers("/", "/**").permitAll()
                 .and()
                 .httpBasic(withDefaults());

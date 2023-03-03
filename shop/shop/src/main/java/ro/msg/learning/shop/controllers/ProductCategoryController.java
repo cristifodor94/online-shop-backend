@@ -21,30 +21,36 @@ public class ProductCategoryController {
     private final ProductCategoryMapper productCategoryMapper;
 
     @PostMapping
-    public ProductCategoryDTO createProductCategory(@RequestBody ProductCategoryDTO productCategoryDTO) {
+    public ResponseEntity<ProductCategoryDTO> createProductCategory(@RequestBody ProductCategoryDTO productCategoryDTO) {
         ProductCategory productCategory = productCategoryService.createCategory(productCategoryMapper.categoryDtoToCategory(productCategoryDTO));
-        return productCategoryMapper.categoryToCategoryDTO(productCategory);
+        ProductCategoryDTO dto = productCategoryMapper.categoryToCategoryDTO(productCategory);
+        return new ResponseEntity<>(dto, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ProductCategoryDTO updateProductCategory(@PathVariable Integer id, @RequestBody ProductCategoryDTO productCategoryDTO) {
-        return productCategoryMapper.categoryToCategoryDTO(productCategoryService.updateCategory(id, productCategoryMapper.categoryDtoToCategory(productCategoryDTO)));
+    public ResponseEntity<ProductCategoryDTO> updateProductCategory(@PathVariable Integer id, @RequestBody ProductCategoryDTO productCategoryDTO) {
+        ProductCategory productCategory = productCategoryService.updateCategory(id, productCategoryMapper.categoryDtoToCategory(productCategoryDTO));
+        ProductCategoryDTO dto = productCategoryMapper.categoryToCategoryDTO(productCategory);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteProductCategory(@PathVariable Integer id) {
         productCategoryService.deleteCategoryById(id);
     }
 
     @GetMapping("/{id}")
-    public ProductCategoryDTO findProductCategoryById(@PathVariable("id") Integer id) {
-        return productCategoryMapper.categoryToCategoryDTO(productCategoryService.findCategoryById(id));
+    public ResponseEntity<ProductCategoryDTO> findProductCategoryById(@PathVariable("id") Integer id) {
+        ProductCategory productCategory = productCategoryService.findCategoryById(id);
+        ProductCategoryDTO dto = productCategoryMapper.categoryToCategoryDTO(productCategory);
+        return new ResponseEntity<>(dto, HttpStatus.FOUND);
     }
 
     @GetMapping
     public ResponseEntity<List<ProductCategoryDTO>> getAllCategories() {
         List<ProductCategory> productCategories = productCategoryService.getAllCategories();
         List<ProductCategoryDTO> productCategoryDTOS = productCategories.stream().map(productCategoryMapper::categoryToCategoryDTO).collect(Collectors.toList());
-        return new ResponseEntity<>(productCategoryDTOS, HttpStatus.OK);
+        return new ResponseEntity<>(productCategoryDTOS, HttpStatus.FOUND);
     }
 }

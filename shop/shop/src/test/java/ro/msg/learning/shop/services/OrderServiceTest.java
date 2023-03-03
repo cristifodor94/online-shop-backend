@@ -34,6 +34,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @TestPropertySource(locations = "classpath:application-test.properties")
 @ActiveProfiles("test")
 @RunWith(SpringRunner.class)
+
 class OrderServiceTest {
     @Autowired
     private MockMvc mockMvc;
@@ -53,10 +54,9 @@ class OrderServiceTest {
 
     @BeforeEach
     private void populateDatabase() throws Exception {
-        mockMvc.perform((post("/test/populateDatabase")));
+        mockMvc.perform((post("/test/populate")));
         productDellLaptop = productService.findProductById(15);
         productRazerKeyboard = productService.findProductById(16);
-
         orderDTO = OrderDTO.builder().build();
         orderDTO.setCreated(LocalDateTime.now());
         orderDTO.setCountry("Romania");
@@ -67,9 +67,9 @@ class OrderServiceTest {
 
     private void createOrderSuccessfully() {
         List<OrderDetailDTO> products = new ArrayList<>();
-        OrderDetailDTO orderDetailDTO = OrderDetailDTO.builder().productId(productDellLaptop.getId()).quantity(2).build();
+        OrderDetailDTO orderDetailDTO = OrderDetailDTO.builder().productId(15).quantity(1).build();
         products.add(orderDetailDTO);
-        orderDetailDTO = OrderDetailDTO.builder().productId(productRazerKeyboard.getId()).quantity(1).build();
+        orderDetailDTO = OrderDetailDTO.builder().productId(16).quantity(1).build();
         products.add(orderDetailDTO);
         orderDTO.setOrderDetails(products);
     }
@@ -115,6 +115,6 @@ class OrderServiceTest {
 
     @AfterEach
     void clearDatabase() throws Exception {
-        mockMvc.perform(post("/test/clearDatabase")).andExpect(status().isOk());
+        mockMvc.perform(post("/test/clear")).andExpect(status().isOk());
     }
 }

@@ -20,30 +20,36 @@ public class ProductController {
     private final ProductMapper productMapper;
 
     @PostMapping
-    public ProductDTO createProduct(@RequestBody ProductDTO productDTO) {
+    public ResponseEntity<ProductDTO> createProduct(@RequestBody ProductDTO productDTO) {
         Product product = productService.createProduct(productMapper.productDtoToProduct(productDTO));
-        return productMapper.productToProductDTO(product);
+        ProductDTO dto = productMapper.productToProductDTO(product);
+        return new ResponseEntity<>(dto, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ProductDTO updateProduct(@PathVariable Integer id, @RequestBody ProductDTO productDTO) {
-        return productMapper.productToProductDTO(productService.updateProduct(id, productMapper.productDtoToProduct(productDTO)));
+    public ResponseEntity<ProductDTO> updateProduct(@PathVariable Integer id, @RequestBody ProductDTO productDTO) {
+        Product product = productService.updateProduct(id, productMapper.productDtoToProduct(productDTO));
+        ProductDTO dto = productMapper.productToProductDTO(product);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteProduct(@PathVariable("id") Integer id) {
         productService.deleteProductById(id);
     }
 
     @GetMapping({"/{id}"})
-    public ProductDTO readProductById(@PathVariable("id") Integer id) {
-        return productMapper.productToProductDTO(productService.findProductById(id));
+    public ResponseEntity<ProductDTO> readProductById(@PathVariable("id") Integer id) {
+        Product product = productService.findProductById(id);
+        ProductDTO dto = productMapper.productToProductDTO(product);
+        return new ResponseEntity<>(dto, HttpStatus.FOUND);
     }
 
     @GetMapping
     public ResponseEntity<List<ProductDTO>> listProducts() {
         List<Product> products = productService.getAllProducts();
         List<ProductDTO> productDTOS = products.stream().map(productMapper::productToProductDTO).collect(Collectors.toList());
-        return new ResponseEntity<>(productDTOS, HttpStatus.OK);
+        return new ResponseEntity<>(productDTOS, HttpStatus.FOUND);
     }
 }

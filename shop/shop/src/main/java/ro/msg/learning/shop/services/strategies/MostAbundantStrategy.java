@@ -9,7 +9,6 @@ import ro.msg.learning.shop.services.StockService;
 import ro.msg.learning.shop.services.interfaces.IStrategy;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -25,7 +24,6 @@ public class MostAbundantStrategy implements IStrategy {
         List<Stock> result = new ArrayList<>();
         for (OrderDetail orderDetail : products) {
             List<Stock> stocks = stockService.findLocationByProductAndQuantity(orderDetail.getProduct().getId(), orderDetail.getQuantity());
-            Collections.reverse(stocks);
             if (null != stocks && !stocks.isEmpty() && stocks.get(0).getQuantity() >= orderDetail.getQuantity()) {
                 result.add(stocks.get(0));
             }
@@ -37,7 +35,7 @@ public class MostAbundantStrategy implements IStrategy {
         return result;
     }
 
-    public void editStocksQuantity(List<Stock> stocks, List<OrderDetail> products) {
+    private void editStocksQuantity(List<Stock> stocks, List<OrderDetail> products) {
         for (Stock stock : stocks) {
             for (OrderDetail orderDetail : products) {
                 if (stock.getProduct().equals(orderDetail.getProduct())) {

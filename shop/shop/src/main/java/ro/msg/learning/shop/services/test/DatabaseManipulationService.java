@@ -34,6 +34,7 @@ public class DatabaseManipulationService {
         Supplier supplierRazer = Supplier.builder().id(2).name("Razer").build();
         supplierService.createSupplier(supplierRazer);
 
+
         Product productLaptopDell = Product.builder().id(15).name("Dell Laptop").productCategory(productCategoryIT).supplier(supplierDell).build();
         productService.createProduct(productLaptopDell);
         Product productRazerKeyboard = Product.builder().id(16).name("Razer Keyboard").productCategory(productCategoryIT).supplier(supplierRazer).build();
@@ -42,18 +43,18 @@ public class DatabaseManipulationService {
         Customer customer = Customer.builder().id(15).firstName("Gabriel").lastName("Ionut").username("gionut").password("123").emailAddress("gionut@gmail.com").build();
         customerService.save(customer);
 
-        Location locationPloiesti = Location.builder().id(25).name(CITY).address(Address.builder().country(COUNTRY).city(CITY).county(COUNTY).street(STREET).build()).build();
+        Location locationPloiesti = Location.builder().id(25).name("Location Ploiesti").address(Address.builder().country(COUNTRY).city(CITY).county(COUNTY).street(STREET).build()).build();
         locationService.createLocation(locationPloiesti);
-        Location locationTurda = Location.builder().id(26).name(TURDA_CITY).address(Address.builder().country(COUNTRY).city(TURDA_CITY).county(TURDA_COUNTY).build()).build();
+        Location locationTurda = Location.builder().id(26).name("Location Turda").address(Address.builder().country(COUNTRY).city(TURDA_CITY).county(TURDA_COUNTY).build()).build();
         locationService.createLocation(locationTurda);
 
-        Stock stockLaptopDellPloiesti = Stock.builder().location(locationPloiesti).product(productLaptopDell).quantity(24).build();
+        Stock stockLaptopDellPloiesti = Stock.builder().id(new StockKey(15, 25)).location(locationPloiesti).product(productLaptopDell).quantity(24).build();
         stockService.save(stockLaptopDellPloiesti);
-        Stock stockLaptopDellTurda = Stock.builder().location(locationTurda).product(productLaptopDell).quantity(15).build();
+        Stock stockLaptopDellTurda = Stock.builder().id(new StockKey(15, 26)).location(locationTurda).product(productLaptopDell).quantity(33).build();
         stockService.save(stockLaptopDellTurda);
-        Stock stockRazerKeyboardPloiesti = Stock.builder().location(locationPloiesti).product(productRazerKeyboard).quantity(30).build();
+        Stock stockRazerKeyboardPloiesti = Stock.builder().id(new StockKey(15, 25)).location(locationPloiesti).product(productRazerKeyboard).quantity(44).build();
         stockService.save(stockRazerKeyboardPloiesti);
-        Stock stockRazerKeyboardTurda = Stock.builder().location(locationTurda).product(productRazerKeyboard).quantity(9).build();
+        Stock stockRazerKeyboardTurda = Stock.builder().id(new StockKey(15, 26)).location(locationTurda).product(productRazerKeyboard).quantity(44).build();
         stockService.save(stockRazerKeyboardTurda);
     }
 
