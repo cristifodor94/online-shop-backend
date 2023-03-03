@@ -11,16 +11,16 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler({OrderNotCreatedException.class})
-    public ResponseEntity<Object> handleOrderNotCreatedException(
+    public ResponseEntity<String> handleOrderNotCreatedException(
             Exception ex, WebRequest request) {
-        return new ResponseEntity<Object>(
+        return new ResponseEntity<>(
                 "Order not created because of missing stock", new HttpHeaders(), HttpStatus.INSUFFICIENT_STORAGE);
     }
 
     @ExceptionHandler({NotFoundException.class})
-    public ResponseEntity<Object> handleProductNotFoundException(
+    public ResponseEntity<String> handleProductNotFoundException(
             Exception ex, WebRequest request) {
-        return new ResponseEntity<Object>(
+        return new ResponseEntity<>(
                 "Product not found", new HttpHeaders(), HttpStatus.NOT_FOUND);
     }
 

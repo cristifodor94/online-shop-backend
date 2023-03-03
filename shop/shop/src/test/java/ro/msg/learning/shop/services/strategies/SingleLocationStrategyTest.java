@@ -113,7 +113,7 @@ class SingleLocationStrategyTest {
 
         assertFalse(stockList.isEmpty());
         assertThat(stockList).hasSize(1);
-        assertThat(stockList.get(0).getLocation().equals(locationCluj));
+        assertThat(stockList.get(0).getLocation()).isEqualTo(locationCluj);
     }
 
     @Test

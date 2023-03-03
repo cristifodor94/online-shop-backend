@@ -22,4 +22,11 @@ public class OrderDetailMapper {
                         .product(Product.builder().id(dto.getProductId()).build())
                         .quantity(dto.getQuantity()).build()).collect(Collectors.toList());
     }
+
+    public List<OrderDetailDTO> orderToOrderDetailDTO(List<OrderDetail> orderDetail) {
+        return orderDetail.stream()
+                .map(o -> OrderDetailDTO.builder()
+                        .productId(o.getProduct().getId())
+                        .quantity(o.getQuantity()).build()).collect(Collectors.toList());
+    }
 }

@@ -11,7 +11,15 @@ public class SupplierMapper {
 
     public Supplier supplierDtoToSupplier(SupplierDTO supplierDTO) {
         return Supplier.builder()
+                .id(supplierDTO.getId())
                 .name(supplierDTO.getName())
+                .build();
+    }
+
+    public SupplierDTO supplierToSupplierDTO(Supplier supplier) {
+        return SupplierDTO.builder()
+                .id(supplier.getId())
+                .name(supplier.getName())
                 .build();
     }
 }

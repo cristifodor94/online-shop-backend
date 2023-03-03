@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ro.msg.learning.shop.dtos.OrderDTO;
+import ro.msg.learning.shop.dtos.OrderDetailDTO;
 import ro.msg.learning.shop.entities.Order;
-import ro.msg.learning.shop.entities.OrderDetail;
 import ro.msg.learning.shop.mappers.OrderDetailMapper;
 import ro.msg.learning.shop.mappers.OrderMapper;
 import ro.msg.learning.shop.services.OrderService;
@@ -27,8 +27,11 @@ public class OrderController {
     private final OrderDetailMapper orderDetailMapper;
 
     @PostMapping
-    public ResponseEntity<Order> createOrder(@RequestBody OrderDTO orderDTO) {
-        List<OrderDetail> orderDetails = orderDetailMapper.orderDtoToOrderDetail(orderDTO.getOrderDetails());
-        return new ResponseEntity<>(orderService.createOrder(orderMapper.orderDtoToOrder(orderDTO), orderDetails), HttpStatus.OK);
+    public ResponseEntity<OrderDTO> createOrder(@RequestBody OrderDTO orderDTO) {
+        Order orderToCreate = orderService.createOrder(orderMapper.orderDtoToOrder(orderDTO), orderDetailMapper.orderDtoToOrderDetail(orderDTO.getOrderDetails()));
+        orderDTO = orderMapper.orderToOrderDTO(orderToCreate);
+        List<OrderDetailDTO> orderDetailDTOS = orderDetailMapper.orderToOrderDetailDTO(orderToCreate.getOrderDetails());
+        orderDTO.setOrderDetails(orderDetailDTOS);
+        return new ResponseEntity<>(orderDTO, HttpStatus.OK);
     }
 }

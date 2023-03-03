@@ -29,6 +29,7 @@ public class OrderService {
             order.setShippedFrom(locationList.get(0));
             Customer customer = customerService.findById(1);
             order.setCustomer(customer);
+            order.setOrderDetails(orderDetails);
             orderRepository.save(order);
             orderDetails.forEach(e -> e.setOrder(order));
             orderDetails.forEach(orderDetailService::save);

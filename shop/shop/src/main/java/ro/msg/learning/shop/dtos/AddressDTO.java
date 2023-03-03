@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LocationDTO {
-    private Integer id;
-    private String name;
+public class AddressDTO {
     private String country;
     private String city;
     private String county;
