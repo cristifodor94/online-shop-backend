@@ -59,17 +59,24 @@ class MostAbundantStrategyTest {
 
     private void createLocations() {
         this.locationCluj = Location.builder()
+                .id(1)
                 .name("Cluj Location")
                 .address(Address.builder().country(COUNTRY).city(CLUJ_CITY).county(CLUJ_COUNTY).street(STREET)
                         .build())
                 .build();
-        this.locationSibiu = Location.builder().name("Sibiu Location")
+        this.locationSibiu = Location.builder()
+                .id(2)
+                .name("Sibiu Location")
                 .address(Address.builder().country(COUNTRY).city(CITY).county(COUNTY).street(STREET).build())
                 .build();
     }
 
     private void createProductCategory() {
-        this.productCategory = ProductCategory.builder().id(1).name("Electronics").description("This category is about electronics").build();
+        this.productCategory = ProductCategory.builder()
+                .id(1)
+                .name("Electronics")
+                .description("This category is about electronics")
+                .build();
     }
 
     private void createSuppliers() {
@@ -78,17 +85,41 @@ class MostAbundantStrategyTest {
     }
 
     private void createProducts() {
-        this.productDellLaptop = Product.builder().id(1).name("Dell Laptop").productCategory(productCategory).supplier(supplierEmag).build();
-        this.productRazerKeyboard = Product.builder().id(2).name("Razer Keyboard").productCategory(productCategory).supplier(supplierAltex).build();
+        this.productDellLaptop = Product.builder()
+                .id(1)
+                .name("Dell Laptop")
+                .productCategory(productCategory)
+                .supplier(supplierEmag).build();
+        this.productRazerKeyboard = Product.builder()
+                .id(2)
+                .name("Razer Keyboard")
+                .productCategory(productCategory)
+                .supplier(supplierAltex).build();
     }
 
     private void createStocks() {
         this.stocks = new ArrayList<>();
-        this.stockDellLaptopSibiu = Stock.builder().location(locationSibiu).product(productDellLaptop).quantity(5).build();
-        this.stockRazerKeyboardCluj = Stock.builder().location(locationCluj).product(productRazerKeyboard).quantity(30).build();
-        this.stockDellLaptopCluj = Stock.builder().location(locationCluj).product(productDellLaptop).quantity(40).build();
-        this.stockRazerKeyboardSibiu = Stock.builder().location(locationSibiu).product(productRazerKeyboard).quantity(7).build();
-        this.stocks.addAll(Arrays.asList(stockDellLaptopCluj, stockDellLaptopSibiu, stockRazerKeyboardCluj, stockRazerKeyboardSibiu));
+        this.stockDellLaptopSibiu = Stock.builder()
+                .id(StockKey.builder().productId(1).locationId(1).build())
+                .product(productDellLaptop)
+                .location(locationSibiu)
+                .quantity(5).build();
+        this.stockRazerKeyboardCluj = Stock.builder()
+                .id(StockKey.builder().productId(2).locationId(2).build())
+                .location(locationCluj)
+                .product(productRazerKeyboard)
+                .quantity(30).build();
+        this.stockDellLaptopCluj = Stock.builder()
+                .id(StockKey.builder().productId(1).locationId(1).build())
+                .location(locationCluj)
+                .product(productDellLaptop)
+                .quantity(40).build();
+        this.stockRazerKeyboardSibiu = Stock.builder()
+                .id(StockKey.builder().productId(2).locationId(2).build())
+                .location(locationSibiu)
+                .product(productRazerKeyboard)
+                .quantity(7).build();
+        this.stocks.addAll(Arrays.asList(stockDellLaptopSibiu, stockRazerKeyboardCluj, stockDellLaptopCluj, stockRazerKeyboardSibiu));
     }
 
     @Test
@@ -99,8 +130,11 @@ class MostAbundantStrategyTest {
         orderDetail = OrderDetail.builder().product(productRazerKeyboard).quantity(4).build();
         this.orderDetails.add(orderDetail);
 
-        when(stockService.findAll()).thenReturn(stocks);
+        when(stockService.findTopByProductIdOrderByQuantityDesc(orderDetails.get(0).getProduct().getId(), orderDetails.get(0).getQuantity()))
+                .thenReturn(Arrays.asList(stockDellLaptopCluj, stockDellLaptopSibiu));
+        when(stockService.findTopByProductIdOrderByQuantityDesc(orderDetails.get(1).getProduct().getId(), orderDetails.get(1).getQuantity()))
+                .thenReturn(Arrays.asList(stockRazerKeyboardSibiu, stockRazerKeyboardCluj));
         List<Stock> stockList = mostAbundantStrategy.createOrder(orderDetails);
-        assertThat(stockList.get(0).getLocation().equals(locationCluj) && stockList.get(1).equals(locationSibiu));
+        assertThat(stockList.get(0).getLocation().equals(locationCluj) && stockList.get(1).getLocation().equals(locationSibiu));
     }
 }

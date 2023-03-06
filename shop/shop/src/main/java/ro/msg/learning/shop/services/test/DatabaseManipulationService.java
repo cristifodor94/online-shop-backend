@@ -48,13 +48,26 @@ public class DatabaseManipulationService {
         Location locationTurda = Location.builder().id(26).name("Location Turda").address(Address.builder().country(COUNTRY).city(TURDA_CITY).county(TURDA_COUNTY).build()).build();
         locationService.createLocation(locationTurda);
 
-        Stock stockLaptopDellPloiesti = Stock.builder().id(new StockKey(15, 25)).location(locationPloiesti).product(productLaptopDell).quantity(24).build();
+        Stock stockLaptopDellPloiesti = Stock.builder().id(new StockKey(15, 25))
+                .location(locationPloiesti)
+                .product(productLaptopDell)
+                .quantity(24).build();
         stockService.save(stockLaptopDellPloiesti);
-        Stock stockLaptopDellTurda = Stock.builder().id(new StockKey(15, 26)).location(locationTurda).product(productLaptopDell).quantity(33).build();
-        stockService.save(stockLaptopDellTurda);
-        Stock stockRazerKeyboardPloiesti = Stock.builder().id(new StockKey(15, 25)).location(locationPloiesti).product(productRazerKeyboard).quantity(44).build();
+        Stock stockRazerKeyboardPloiesti = Stock.builder().id(new StockKey(16, 25))
+                .location(locationPloiesti)
+                .product(productRazerKeyboard)
+                .quantity(44).build();
         stockService.save(stockRazerKeyboardPloiesti);
-        Stock stockRazerKeyboardTurda = Stock.builder().id(new StockKey(15, 26)).location(locationTurda).product(productRazerKeyboard).quantity(44).build();
+
+        Stock stockLaptopDellTurda = Stock.builder().id(new StockKey(15, 26))
+                .location(locationTurda)
+                .product(productLaptopDell)
+                .quantity(33).build();
+        stockService.save(stockLaptopDellTurda);
+        Stock stockRazerKeyboardTurda = Stock.builder().id(new StockKey(16, 26))
+                .location(locationTurda)
+                .product(productRazerKeyboard)
+                .quantity(44).build();
         stockService.save(stockRazerKeyboardTurda);
     }
 

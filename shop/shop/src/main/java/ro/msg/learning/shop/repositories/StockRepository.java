@@ -13,5 +13,5 @@ public interface StockRepository extends JpaRepository<Stock, Integer> {
 
 
     @Query("SELECT s FROM Stock s WHERE s.product.id = :productId and s.quantity >= :quantity ORDER by s.quantity DESC LIMIT 1")
-    List<Stock> findLocationByProductIAndQuantityDesc(@Param("productId") Integer product, @Param("quantity") Integer quantity);
+    List<Stock> findTopByProductIdOrderByQuantityDesc(@Param("productId") Integer product, @Param("quantity") Integer quantity);
 }

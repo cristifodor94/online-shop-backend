@@ -23,7 +23,7 @@ public class MostAbundantStrategy implements IStrategy {
         }
         List<Stock> result = new ArrayList<>();
         for (OrderDetail orderDetail : products) {
-            List<Stock> stocks = stockService.findLocationByProductAndQuantity(orderDetail.getProduct().getId(), orderDetail.getQuantity());
+            List<Stock> stocks = stockService.findTopByProductIdOrderByQuantityDesc(orderDetail.getProduct().getId(), orderDetail.getQuantity());
             if (null != stocks && !stocks.isEmpty() && stocks.get(0).getQuantity() >= orderDetail.getQuantity()) {
                 result.add(stocks.get(0));
             }

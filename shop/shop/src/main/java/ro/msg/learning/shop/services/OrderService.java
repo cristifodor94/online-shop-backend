@@ -25,7 +25,7 @@ public class OrderService {
     public Order createOrder(Order order, List<OrderDetail> orderDetails) {
         List<Stock> stockList = strategyConfiguration.findStrategy().createOrder(orderDetails);
         order.setShippedFrom(stockList.get(0).getLocation());
-        Customer customer = customerService.findById(1);
+        Customer customer = customerService.findById(15);
         order.setCustomer(customer);
         order.setOrderDetails(orderDetails);
         orderRepository.save(order);

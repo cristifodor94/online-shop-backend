@@ -35,7 +35,7 @@ public class StockService {
         stockRepository.save(stock);
     }
 
-    public List<Stock> findLocationByProductAndQuantity(Integer productId, Integer quantity) {
-        return stockRepository.findLocationByProductIAndQuantityDesc(productId, quantity);
+    public List<Stock> findTopByProductIdOrderByQuantityDesc(Integer productId, Integer quantity) {
+        return stockRepository.findTopByProductIdOrderByQuantityDesc(productId, quantity);
     }
 }

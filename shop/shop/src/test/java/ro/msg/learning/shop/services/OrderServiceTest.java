@@ -90,7 +90,7 @@ class OrderServiceTest {
                 .content(objectMapper.writeValueAsString(orderDTO))
                 .contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON)
         ).andExpect(status().is2xxSuccessful());
-        assertThat(stockService.findAll().get(0).getLocation().equals(locationService.findLocationById(25)));
+        assertThat(stockService.findAll().get(0).getLocation().equals(locationService.findLocationById(26)));
     }
 
     @Test
