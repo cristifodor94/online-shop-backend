@@ -10,6 +10,7 @@ import ro.msg.learning.shop.services.interfaces.IStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -23,9 +24,9 @@ public class MostAbundantStrategy implements IStrategy {
         }
         List<Stock> result = new ArrayList<>();
         for (OrderDetail orderDetail : products) {
-            List<Stock> stocks = stockService.findTopByProductIdOrderByQuantityDesc(orderDetail.getProduct().getId(), orderDetail.getQuantity());
-            if (null != stocks && !stocks.isEmpty() && stocks.get(0).getQuantity() >= orderDetail.getQuantity()) {
-                result.add(stocks.get(0));
+            Optional<Stock> stocks = stockService.findMostAbundantByProductId(orderDetail.getProduct().getId(), orderDetail.getQuantity());
+            if (null != stocks && !stocks.isEmpty() && stocks.get().getQuantity() >= orderDetail.getQuantity()) {
+                result.add(stocks.get());
             }
         }
         if (result.size() != products.size()) {

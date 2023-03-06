@@ -43,13 +43,13 @@ public class ProductController {
     public ResponseEntity<ProductDTO> readProductById(@PathVariable("id") Integer id) {
         Product product = productService.findProductById(id);
         ProductDTO dto = productMapper.productToProductDTO(product);
-        return new ResponseEntity<>(dto, HttpStatus.FOUND);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
     @GetMapping
     public ResponseEntity<List<ProductDTO>> listProducts() {
         List<Product> products = productService.getAllProducts();
         List<ProductDTO> productDTOS = products.stream().map(productMapper::productToProductDTO).collect(Collectors.toList());
-        return new ResponseEntity<>(productDTOS, HttpStatus.FOUND);
+        return new ResponseEntity<>(productDTOS, HttpStatus.OK);
     }
 }

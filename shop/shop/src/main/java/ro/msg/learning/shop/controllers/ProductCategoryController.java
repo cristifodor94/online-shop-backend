@@ -44,13 +44,13 @@ public class ProductCategoryController {
     public ResponseEntity<ProductCategoryDTO> findProductCategoryById(@PathVariable("id") Integer id) {
         ProductCategory productCategory = productCategoryService.findCategoryById(id);
         ProductCategoryDTO dto = productCategoryMapper.categoryToCategoryDTO(productCategory);
-        return new ResponseEntity<>(dto, HttpStatus.FOUND);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
     @GetMapping
     public ResponseEntity<List<ProductCategoryDTO>> getAllCategories() {
         List<ProductCategory> productCategories = productCategoryService.getAllCategories();
         List<ProductCategoryDTO> productCategoryDTOS = productCategories.stream().map(productCategoryMapper::categoryToCategoryDTO).collect(Collectors.toList());
-        return new ResponseEntity<>(productCategoryDTOS, HttpStatus.FOUND);
+        return new ResponseEntity<>(productCategoryDTOS, HttpStatus.OK);
     }
 }

@@ -14,6 +14,7 @@ import ro.msg.learning.shop.services.StockService;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.when;
@@ -130,10 +131,14 @@ class MostAbundantStrategyTest {
         orderDetail = OrderDetail.builder().product(productRazerKeyboard).quantity(4).build();
         this.orderDetails.add(orderDetail);
 
-        when(stockService.findTopByProductIdOrderByQuantityDesc(orderDetails.get(0).getProduct().getId(), orderDetails.get(0).getQuantity()))
-                .thenReturn(Arrays.asList(stockDellLaptopCluj, stockDellLaptopSibiu));
-        when(stockService.findTopByProductIdOrderByQuantityDesc(orderDetails.get(1).getProduct().getId(), orderDetails.get(1).getQuantity()))
-                .thenReturn(Arrays.asList(stockRazerKeyboardSibiu, stockRazerKeyboardCluj));
+        when(stockService.findMostAbundantByProductId(orderDetails.get(0).getProduct().getId(), orderDetails.get(0).getQuantity()))
+                .thenReturn(Optional.of(stockDellLaptopCluj));
+        when(stockService.findMostAbundantByProductId(orderDetails.get(0).getProduct().getId(), orderDetails.get(0).getQuantity()))
+                .thenReturn(Optional.of(stockDellLaptopSibiu));
+        when(stockService.findMostAbundantByProductId(orderDetails.get(1).getProduct().getId(), orderDetails.get(1).getQuantity()))
+                .thenReturn(Optional.of(stockRazerKeyboardCluj));
+        when(stockService.findMostAbundantByProductId(orderDetails.get(1).getProduct().getId(), orderDetails.get(1).getQuantity()))
+                .thenReturn(Optional.of(stockRazerKeyboardSibiu));
         List<Stock> stockList = mostAbundantStrategy.createOrder(orderDetails);
         assertThat(stockList.get(0).getLocation().equals(locationCluj) && stockList.get(1).getLocation().equals(locationSibiu));
     }

@@ -44,13 +44,13 @@ public class SupplierController {
     public ResponseEntity<SupplierDTO> getSupplierById(@PathVariable("id") Integer id) {
         Supplier supplier = supplierService.findSupplierById(id);
         SupplierDTO dto = supplierMapper.supplierToSupplierDTO(supplier);
-        return new ResponseEntity<>(dto, HttpStatus.FOUND);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
     @GetMapping
     public ResponseEntity<List<SupplierDTO>> getAllSuppliers() {
         List<Supplier> suppliers = supplierService.getAllSuppliers();
         List<SupplierDTO> supplierDTOS = suppliers.stream().map(supplierMapper::supplierToSupplierDTO).collect(Collectors.toList());
-        return new ResponseEntity<>(supplierDTOS, HttpStatus.FOUND);
+        return new ResponseEntity<>(supplierDTOS, HttpStatus.OK);
     }
 }

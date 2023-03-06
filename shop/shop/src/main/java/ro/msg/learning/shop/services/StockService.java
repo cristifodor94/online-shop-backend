@@ -7,6 +7,7 @@ import ro.msg.learning.shop.entities.Stock;
 import ro.msg.learning.shop.repositories.StockRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -35,7 +36,7 @@ public class StockService {
         stockRepository.save(stock);
     }
 
-    public List<Stock> findTopByProductIdOrderByQuantityDesc(Integer productId, Integer quantity) {
-        return stockRepository.findTopByProductIdOrderByQuantityDesc(productId, quantity);
+    public Optional<Stock> findMostAbundantByProductId(Integer productId, Integer quantity) {
+        return stockRepository.findMostAbundantByProductId(productId, quantity);
     }
 }

@@ -10,8 +10,6 @@ import ro.msg.learning.shop.entities.Order;
 @RequiredArgsConstructor
 public class OrderMapper {
 
-    private final AddressMapper addressMapper;
-
     public Order orderDtoToOrder(OrderDTO orderDTO) {
         return Order.builder()
                 .created(orderDTO.getCreated())
