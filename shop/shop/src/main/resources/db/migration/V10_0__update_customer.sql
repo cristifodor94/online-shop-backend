@@ -1,0 +1,6 @@
+ALTER TABLE customer
+ADD CONSTRAINT
+UNIQUE(email_address);
+ALTER TABLE customer
+ADD CONSTRAINT
+UNIQUE(username);

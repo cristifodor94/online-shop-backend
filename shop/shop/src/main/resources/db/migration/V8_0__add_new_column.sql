@@ -1,0 +1,1 @@
+ALTER TABLE customer ADD roles VARCHAR(255) NULL;

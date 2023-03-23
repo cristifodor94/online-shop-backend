@@ -12,7 +12,7 @@ public class OrderMapper {
 
     public Order orderDtoToOrder(OrderDTO orderDTO) {
         return Order.builder()
-                .created(orderDTO.getCreated())
+                .created(orderDTO.getCreated().now())
                 .address(Address.builder()
                         .city(orderDTO.getCity())
                         .county(orderDTO.getCounty())
@@ -25,7 +25,7 @@ public class OrderMapper {
     public OrderDTO orderToOrderDTO(Order order) {
         return OrderDTO.builder()
                 .id(order.getId())
-                .created(order.getCreated())
+                .created(order.getCreated().now())
                 .city(order.getAddress().getCity())
                 .county(order.getAddress().getCounty())
                 .country(order.getAddress().getCountry())

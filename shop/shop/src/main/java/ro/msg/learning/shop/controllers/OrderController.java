@@ -1,6 +1,7 @@
 package ro.msg.learning.shop.controllers;
 
 
+import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,14 +22,13 @@ import java.util.List;
 @RequestMapping(value = "/orders")
 @RequiredArgsConstructor
 
-
 public class OrderController {
     private final OrderMapper orderMapper;
     private final OrderService orderService;
     private final OrderDetailMapper orderDetailMapper;
 
     @PostMapping
-    public ResponseEntity<OrderDTO> createOrder(@RequestBody OrderDTO orderDTO) {
+    public ResponseEntity<OrderDTO> createOrder(@RequestBody OrderDTO orderDTO) throws MessagingException {
         Order orderToCreate = orderService.createOrder(orderMapper.orderDtoToOrder(orderDTO), orderDetailMapper.orderDetailDtoToOrderDetail(orderDTO.getOrderDetails()));
         orderDTO = orderMapper.orderToOrderDTO(orderToCreate);
         List<OrderDetailDTO> orderDetailDTOS = orderDetailMapper.orderDetailToOrderDetailDTO(orderToCreate.getOrderDetails());
